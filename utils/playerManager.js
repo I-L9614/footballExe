@@ -45,21 +45,21 @@ function addPlayer(playerData) {
     players.push(newPlayer)
     return newPlayer
 }
-addPlayer({name:"itamar",position:"Forward",age:21,nationality:"Israeli"})
+addPlayer({ name: "itamar", position: "Forward", age: 21, nationality: "Israeli" })
 console.log(getAllPlayers())
 
 export function removePlayer(id) {
-    for (let i = 0;i<players.length;i++) {
-        if (players[i].id===id) {
-            const removed = players.splice(i,1)
+    for (let i = 0; i < players.length; i++) {
+        if (players[i].id === id) {
+            const removed = players.splice(i, 1)
             return removed
         }
         else {
             return null
         }
-    } 
+    }
 }
 
 function updatePayerData(name) {
-    
+
 }
