@@ -60,6 +60,12 @@ export function removePlayer(id) {
     }
 }
 
-function updatePayerData(name) {
-
+function updatePayerData(id, newData) {
+    for (let i = 0; i < players.length; i++) {
+        if (players[i].id === id) {
+            for (let key in newData) {
+                players[i][key] = newData[key]
+            }
+        }
+    }
 }
