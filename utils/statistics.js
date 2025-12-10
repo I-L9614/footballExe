@@ -48,3 +48,6 @@ export function getTop3Scorers() {
     return players.map(player => player).sort((a, b) => b.goals - a.goals).slice(0,3)
 }
 
+export function getAllPlayersNmae() {
+    return players.map(player => player.name)
+}
