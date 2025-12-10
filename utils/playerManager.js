@@ -45,8 +45,7 @@ function addPlayer(playerData) {
     players.push(newPlayer)
     return newPlayer
 }
-addPlayer({ name: "itamar", position: "Forward", age: 21, nationality: "Israeli" })
-console.log(getAllPlayers())
+
 
 export function removePlayer(id) {
     for (let i = 0; i < players.length; i++) {
@@ -69,3 +68,9 @@ function updatePayerData(id, newData) {
         }
     }
 }
+
+export const findPlayerByPartialName = (partialName) => {
+    const likeNmae = players.filter(player => player.name.includes(partialName))
+    return likeNmae
+}
+
