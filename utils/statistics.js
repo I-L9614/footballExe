@@ -22,8 +22,11 @@ export function getAverageAge() {
     return totalAge/players.length
 }
 
-export function getPlayerByNationality(nationality) {
+export function getPlayersByNationality(nationality) {
     return players.filter(player => player.nationality===nationality)
 }
-
+// this is create a copy
+export function getPlayersByGoals() {
+    return players.map(player=>player).sort((a, b) => b.goals - a.goals) 
+}
 
