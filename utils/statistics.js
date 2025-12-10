@@ -34,3 +34,9 @@ export function getYoungPlayers(maxAge) {
     const youngPlayers = players.filter(player => player.age < maxAge)
     return youngPlayers
 }
+
+export function getMinGoals(minGoals) {
+    const playersMinGoals = players.filter(player => player.goals >= minGoals)
+    return playersMinGoals
+}
+
