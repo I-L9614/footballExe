@@ -51,3 +51,8 @@ export function getTop3Scorers() {
 export function getAllPlayersNmae() {
     return players.map(player => player.name)
 }
+
+export function getGoalsPerMatch(player) {
+    const perMatch = player.goals/player.matches
+    return perMatch.toFixed(2)
+}
