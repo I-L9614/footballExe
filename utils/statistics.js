@@ -5,7 +5,7 @@ export function getTotalGoals() {
 }
 
 export function getPlayerByPosition(position) {
-    return players.filter(player => player.position===position)
+    return players.filter(player => player.position === position)
 }
 
 export function getTotalAssist() {
@@ -14,19 +14,23 @@ export function getTotalAssist() {
 
 export function getTopscorer() {
     const getMax = (a, b) => Math.max(a, b)
-    return players.reduce((accumulator, currentValue) => accumulator = getMax(accumulator,currentValue.goals),0 );
+    return players.reduce((accumulator, currentValue) => accumulator = getMax(accumulator, currentValue.goals), 0);
 }
 
 export function getAverageAge() {
     const totalAge = players.reduce((total, player) => total + player.age, 0)
-    return totalAge/players.length
+    return totalAge / players.length
 }
 
 export function getPlayersByNationality(nationality) {
-    return players.filter(player => player.nationality===nationality)
+    return players.filter(player => player.nationality === nationality)
 }
 // this is create a copy
 export function getPlayersByGoals() {
-    return players.map(player=>player).sort((a, b) => b.goals - a.goals) 
+    return players.map(player => player).sort((a, b) => b.goals - a.goals)
 }
 
+export function getYoungPlayers(maxAge) {
+    const youngPlayers = players.filter(player => player.age < maxAge)
+    return youngPlayers
+}
