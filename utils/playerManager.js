@@ -31,7 +31,7 @@ export const findPlayerById = (id) => {
 // }
 
 
-function addPlayer(playerData) {
+export function addPlayer(playerData) {
     const newPlayer = {
         id: players.length + 1,
         name: playerData.name,
@@ -59,7 +59,7 @@ export function removePlayer(id) {
     }
 }
 
-function updatePayerData(id, newData) {
+export function updatePayerData(id, newData) {
     for (let i = 0; i < players.length; i++) {
         if (players[i].id === id) {
             for (let key in newData) {
